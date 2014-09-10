@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 10, 2014 at 08:20 PM
+-- Generation Time: Sep 10, 2014 at 10:37 PM
 -- Server version: 1.0.13
 -- PHP Version: 5.3.10-1ubuntu3.13
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `items` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
   KEY `LabItemTypeIndex` (`item_type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 -- --------------------------------------------------------
 
@@ -47,13 +47,13 @@ CREATE TABLE IF NOT EXISTS `items` (
 --
 
 CREATE TABLE IF NOT EXISTS `item_types` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
   `modified` datetime DEFAULT NULL,
   `created` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `stock_histories` (
   `created` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `item_id` (`item_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 -- --------------------------------------------------------
 
@@ -79,13 +79,13 @@ CREATE TABLE IF NOT EXISTS `stock_histories` (
 --
 
 CREATE TABLE IF NOT EXISTS `stock_unit_types` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
   `modified` datetime DEFAULT NULL,
   `created` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Constraints for dumped tables
