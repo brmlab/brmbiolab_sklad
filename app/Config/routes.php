@@ -26,6 +26,8 @@
  */
 Router::connect('/', array('controller' => 'items', 'action' => 'index'));
 Router::connect('/items/delete/:id', array('controller' => 'items', 'action' => 'delete'), array('pass' => array('id'), 'id' => '[0-9]+'));
+Router::connect('/items/view/:id', array('controller' => 'items', 'action' => 'view'), array('pass' => array('id'), 'id' => '[0-9]+'));
+Router::connect('/items/edit/:id', array('controller' => 'items', 'action' => 'edit'), array('pass' => array('id'), 'id' => '[0-9]+'));
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on
