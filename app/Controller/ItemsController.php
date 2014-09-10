@@ -30,11 +30,19 @@ class ItemsController extends AppController
 
     public function view($id = null)
     {
-        if (!$this->ItemType->exists($id)) {
+        if (!$this->Item->exists($id)) {
             throw new NotFoundException(__('Invalid item type'));
         }
-        $options = array('conditions' => array('ItemType.id' => $id));
-        $this->set('itemType', $this->ItemType->find('first', $options));
+        if ($this->request->is(array('post', 'put'))) {
+            $this->StockHistory->create();
+            if ($this->StockHistory->save($this->request->data)) {
+                $this->Session->setFlash(__('The item type has been saved.'));
+            } else {
+                $this->Session->setFlash(__('The item type could not be saved. Please, try again.'));
+            }
+        }
+        $options = array('conditions' => array('Item.id' => $id));
+        $this->set('item', $this->Item->find('first', $options));
     }
 
     public function edit($id = null)
@@ -50,8 +58,10 @@ class ItemsController extends AppController
                 $this->Session->setFlash(__('The item type could not be saved. Please, try again.'));
             }
         } else {
-            $options = array('conditions' => array('ItemType.id' => $id));
-            $this->request->data = $this->ItemType->find('first', $options);
+            $options = array('conditions' => array('Item.id' => $id));
+            $this->request->data = $this->Item->find('first', $options);
+            $this->set('itemTypes', $this->ItemType->find('list'));
+            $this->set('stockUnitTypes', $this->StockUnitType->find('list'));
         }
     }
 

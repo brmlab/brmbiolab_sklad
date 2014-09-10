@@ -33,22 +33,22 @@ h1 {
 	clear: both;
 }
 
-#items-table {
+.dataTable {
 	width: 100%;
 	margin: 15px;
 }
 
-#items-table thead > tr > td, #items-table tfoot > tr > td {
+.dataTable thead > tr > td, .dataTable tfoot > tr > td {
 	font-weight: bold;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
-#items-table tbody > tr, thead > tr {
+.dataTable tbody > tr, thead > tr {
 	border-bottom: 1px solid #ececec;
 }
 
-#items-table tbody > tr > td {
+.dataTable tbody > tr > td {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
@@ -58,11 +58,11 @@ table .actions a {
 	padding-right: 5px;
 }
 
-#items-table_filter {
+.dataTables_filter {
 	padding: 10px;
 }
 
-#items-table_filter input[type=search] {
+.dataTables_filter input[type=search] {
 	padding: 10px;
 	font-size: 15px;
 	width: 200px;
@@ -95,4 +95,10 @@ form .input select {
 #flashMessage {
 	padding: 20px;
 	background-color: #fafafa;
+}
+
+hr {
+	width: 100%;
+	background-color: black;
+	color: black;
 }
