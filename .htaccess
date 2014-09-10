@@ -1,3 +1,8 @@
+AuthType Basic
+AuthName "Biolab Catalogue System"
+AuthUserFile /var/www/biolab/.htpasswd
+Require valid-user
+
 <IfModule mod_rewrite.c>
    RewriteEngine on
    RewriteRule    ^$ app/webroot/    [L]
