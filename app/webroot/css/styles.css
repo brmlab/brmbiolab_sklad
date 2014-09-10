@@ -1,0 +1,98 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+#header {
+	width: 100%;
+	min-height: 30px;
+	border-bottom: 3px solid black;
+}
+
+h1 {
+	font-size: 30px;
+	float: left;
+	padding: 10px;
+}
+
+#top-menu {
+	float: right;
+	margin-right: 30px;
+}
+
+#top-menu > li {
+	float: left;
+}
+
+#top-menu > li > a {
+	padding: 15px;
+	display: block;
+}
+
+.clear {
+	clear: both;
+}
+
+#items-table {
+	width: 100%;
+	margin: 15px;
+}
+
+#items-table thead > tr > td, #items-table tfoot > tr > td {
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#items-table tbody > tr, thead > tr {
+	border-bottom: 1px solid #ececec;
+}
+
+#items-table tbody > tr > td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+table .actions a {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#items-table_filter {
+	padding: 10px;
+}
+
+#items-table_filter input[type=search] {
+	padding: 10px;
+	font-size: 15px;
+	width: 200px;
+	height: 20px;
+}
+
+form {
+	padding: 15px;
+}
+
+form .input {
+	padding: 10px;
+}
+
+form .input label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+form .input input, form .input textarea {
+	width: 75%;
+}
+
+form .input select {
+	padding: 5px;
+	min-width: 100px;
+}
+
+#flashMessage {
+	padding: 20px;
+	background-color: #fafafa;
+}
