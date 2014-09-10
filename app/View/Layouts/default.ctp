@@ -9,7 +9,8 @@
     echo $this->Html->meta('icon');
     echo $this->Html->script(array(
         '//code.jquery.com/jquery-1.10.2.min.js',
-        '//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js'
+        '//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js',
+        '//cdn.datatables.net/plug-ins/725b2a2115b/filtering/type-based/accent-neutralise.js'
     ));
     echo $this->Html->css(array(
         'reset', 'styles',
